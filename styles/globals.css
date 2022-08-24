@@ -1,26 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica,
+    sans-serif;
+  letter-spacing: 0em;
+  line-height: 1.1;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
-* {
-  box-sizing: border-box;
+::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.style-square-tyvaar {
+  width: 400px;
+  height: 400px;
+  background: url(../public/baldur2.png) no-repeat center;
+  background-position-x: center;
+  background-position-y: 13%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.style-square-ryuuji {
+  width: 400px;
+  height: 400px;
+  background: url(../public/ryuuji.png) no-repeat center;
+  background-position-x: center;
+  background-position-y: top;
+  margin-bottom: 20px;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.bg-test {
+  width: 100px;
+  height: 100px;
+  background: url(../public/Baldur.png) no-repeat center;
+  background-position-x: center;
+  background-position-y: top;
+  margin-bottom: 20px;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.right-card {
+  padding: 50px 50px 50px;
+}
+
+.bg-stradh {
+  background: url(/public/Stradh.png) no-repeat center;
+}
+
+.margin {
+  margin: 0px 0px 60px;
+}
+
+.padding {
+  padding: 16px 0 16px 4px;
+}
+
+.bg-baldur {
+  background: url(../public/Baldur.png);
+  top: 40px;
+  opacity: 1;
+  background-position: 84.0329% 0%;
+}
+
+.bg-gg {
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 65%,
+    rgba(10, 10, 12, 0.1) 70%,
+    #0a0a0c 90%
+  );
+}
+
+.right {
+  right: calc(50% - 63px);
+}
+
+.border-baldur {
+  border: 1px solid #31271e;
+}
+
+.char-header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 120px;
+}
+
+.char-header.bg:before {
+  background: #c8aa6e;
+}
+
+.char-header::before {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 2px;
+}
+
+.char-header-title {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-size: 24px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.char-header-title.bg.char-header-title:before {
+  border-color: #c8aa6e;
+}
+.char-header-title:before {
+  border: 2px solid;
+  content: "";
+  display: block;
+  height: 10px;
+  margin-bottom: 50px;
+  transform: rotate(45deg);
+  width: 10px;
+}
+
+.bg-ryuuji {
+  background: url(../public/Ryuuji-bg.png);
+  top: 40px;
+  opacity: 1;
+  background-position: 84.0329% 0%;
+}
+
+.diamondLeft {
+  position: relative;
+  background: #373121;
+  font-size: 0;
+  z-index: 100;
+}
+
+.diamondLeft:before {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  top: -3.5px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border: 1px solid #373121;
+  content: "\25C7";
+  font-size: 0;
+}
+
+.diamondLeft:before {
+  left: 0px;
+}
+
+.diamondRight {
+  position: relative;
+  background: #373121;
+  font-size: 0;
+  z-index: 100;
+}
+
+.diamondRight:before {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  top: -3px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border: 1px solid #373121;
+  content: "\25C7";
+  font-size: 0;
+}
+.diamondRight:before {
+  left: 0px;
+}
+
+.border-card-box {
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+.faction-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.bg-hex {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fanction-wrapper {
+  height: 300px;
+  width: calc(25% - 30px);
+  margin: 15px 15px 100px 15px;
+}
+
+.Qcard {
+  display: flex;
+  position: relative;
+}
+
+.Qcard-hex.Qcard {
+  height: 100%;
+  width: 100%;
+}
+
+.Qcard-hex {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #010a13;
+  border: 1px solid #1e2328;
+  -webkit-box-shadow: 0 0 40px 0 #000;
+  box-shadow: 0 0 40px 0 #000;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.Qcard-hex {
+  height: 100%;
+  width: 100%;
+}
+
+.Qcard-hex {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.Qcard-hextech {
+  cursor: pointer;
+  outline: 0;
+}
+
+.faction-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.hex-root {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 1.16666;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #f0e6d2;
+}
+
+.faction-name {
+  padding: 15px !important;
+}
+
+.Qcard-hextech:after {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, #f0e6d2, #c89b3c);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
